@@ -14,13 +14,11 @@ interface IProps {
 }
 export const Game = ({
   verifyLetter,
-  pickedWord,
   pickedCategory,
   letters,
   guessedLetters,
   wrongLetters,
   guesses,
-  score,
 }: IProps) => {
   const [letter, setLetter] = useState("");
   const inputRef = useRef<null | HTMLElement>(null);

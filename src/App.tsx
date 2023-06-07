@@ -22,7 +22,7 @@ function App() {
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [wrongLetters, setWrongLetters] = useState<string[]>([]);
   const [guesses, setGuesses] = useState(5);
-  const [score, setScore] = useState(0);
+  const [score] = useState(0);
 
   const pickWordAndCategory = () => {
     // pick a random category

@@ -19,6 +19,7 @@ export const Game = ({
   guessedLetters,
   wrongLetters,
   guesses,
+  score
 }: IProps) => {
   const [letter, setLetter] = useState("");
   const inputRef = useRef<null | HTMLElement>(null);
@@ -36,7 +37,7 @@ export const Game = ({
   return (
     <Container>
       <p>
-        <span>Pontuação: 000</span>
+        <span>Pontuação: {score}</span>
       </p>
       <h1>Adivinhe a palavra:</h1>
       <h3>
@@ -76,7 +77,6 @@ export const Game = ({
           return <span key={index}>{letter}, </span>;
         })}
       </div>
-      {/* <Button title={"Finalizar jogo"} onClick={verifyLetter} /> */}
     </Container>
   );
 };
